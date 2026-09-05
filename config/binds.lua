@@ -84,7 +84,7 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
 ------------------
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(launchPrefix .. TERMINAL))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e " .. FILE_MANAGER_CLI))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(launchPrefix .. TERMINAL .. " -e fish -ic " .. FILE_MANAGER_CLI))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(launchPrefix .. FILE_MANAGER))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(launchPrefix .. EDITOR))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(launchPrefix .. CALCULATOR))
@@ -123,9 +123,10 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(noctCall .. "media previous"), { locked
 -------------------
 
 -- Screen Capture
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
+-- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a -n"))
 hl.bind("Print", hl.dsp.exec_cmd(noctCall .. "screenshot-region"))
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(noctCall .. "screenshot-fullscreen"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(noctCall .. "screenshot-region"))
 
 -- Theming and Wallpaper
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(noctCall .. "panel-toggle wallpaper"))
